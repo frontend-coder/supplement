@@ -2,6 +2,56 @@
 
 /* оформление содержимого шаблона, которое находится под
 header */
+.block_numberfon {
+	padding: 100px 0;
+	background: linear-gradient(to right, #20172a 20%, #0f0917 80%, #0f0917 100%);
+
+}
+
+.block_numberbox {
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.block_numberbox_boult, .block_numberbox_num {
+width: 25%;
+}
+.block_numberbox_boult{
+	position: relative;
+}
+.block_numberbox_boult img{
+position: absolute;
+top:-240px;
+left:-100px;
+}
+.numberbox_num {
+	color:#fff;
+	text-align: center;
+@include font-size(100px);
+font-family: "LatoBlack", sans-serif;
+}
+
+.numberbox_title {
+	@include font-size(16px);
+	color:$acsent_colir;
+	text-transform: uppercase;
+font-family: "LatoBold", sans-serif;
+
+}
+
+.numberbox_descr {
+color:#a9a9a9;
+font-family: "LatoLight", sans-serif;
+
+
+}
+
+
+
+
+
 .block {
 	padding: 60px 0;
 }

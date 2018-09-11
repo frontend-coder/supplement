@@ -18,6 +18,15 @@
 	font-weight: normal;
 }
 
+@font-face {
+	font-family: "LatoLightItalic";
+	src: url("../fonts/LatoLightItalic/LatoLightItalic.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/LatoLightItalic/LatoLightItalic.woff") format("woff"),
+	url("../fonts/LatoLightItalic/LatoLightItalic.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
 
 
 
@@ -63,6 +72,20 @@
 	font-weight: normal;
 }
 
+@font-face {
+	font-family: "RalewayLight";
+	src: url("../fonts/RalewayLight/RalewayLight.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/RalewayLight/RalewayLight.woff") format("woff"),
+	url("../fonts/RalewayLight/RalewayLight.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
 
-
-
+@font-face {
+	font-family: "RalewayBold";
+	src: url("../fonts/RalewayBold/RalewayBold.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/RalewayBold/RalewayBold.woff") format("woff"),
+	url("../fonts/RalewayBold/RalewayBold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}

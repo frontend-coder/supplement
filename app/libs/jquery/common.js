@@ -41,7 +41,23 @@ $(function() {
 	fixedContentPos : false
     });
 
+//слайдер команды
 
+$('#comand_carousel').owlCarousel({
+		loop                 : true,
+		items:1,
+		margin               : 30,
+		slideSpeed           : 2500,
+	//	autoplay             : true,
+		autoplayTimeout      : 3500,
+		nav                  : false,
+		dragBeforeAnimFinish : true,
+		mouseDrag            : true,
+		touchDrag            : true,
+		stagePadding         : 30,
+		stopOnHover          : false
+
+});
 
 
 

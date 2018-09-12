@@ -65,7 +65,6 @@ header */
 }
 
 .block_feture-title {
-	position: relative;
 	text-align: center;
 }
 
@@ -80,17 +79,30 @@ header */
 	margin-bottom: 26px;
 }
 
-.block_feture-title:before {
-	left:48.90%;
-	bottom:13px;
+
+
+
+ .first_part {
+ 	position: relative;
+  }
+
+.first_part:before {
+	right:-15px;
+	bottom:-1px;
 	position: absolute;
 	content: '';
 	height: 40px;
 	width: 1px;
 	background-color: $acsent_colir;
 }
+.supplement_facts .first_part:before {
+    right: -19px;
+}
+.subscribe_block .first_part:before {
+    right: -19px;
+}
 
-.block_feture-title h2 span {
+.block_feture-title h2 .first_part {
 	@include font-size(30px);
 	line-height: (22px / 30px);
 	font-family: "RalewayExtraBold", sans-serif;

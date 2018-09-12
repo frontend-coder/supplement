@@ -3710,18 +3710,4 @@ img.mfp-img {
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
   background: #869791; }
 
-/*
-@import 'app/libs/swiper/swiper.min';
-@import 'app/libs/hamburger/hamburgers.min';
-@import 'app/libs/mmenu/jquery.mmenu.all';
-
-@import 'app/libs/Vertical-Horizontal-Tabs/jquery.tabs';
-
-@import 'app/libs/magnific-popup/magnific-popup';
-@import 'app/libs/animate/animate';
-
-@import 'app/libs/hamburger/hamburgers.min';
-@import 'app/libs/mmenu/jquery.mmenu.all';
-*/
-
 /*# sourceMappingURL=libs.min.css.map */

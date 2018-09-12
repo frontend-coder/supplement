@@ -32,7 +32,7 @@
       </head>
       <body>
 
-       <header class="header_fon">
+       <header class="header_fon" id="main">
         <div class="top_line">
           <div class="container">
             <div class="row">
@@ -45,52 +45,52 @@
                   <div class="top_line_text">Supplement</div>
                 </div>
                 <div class="mobile_gamburger">
-                  <a href="#" class="toggle-mnu">
-                    <span></span>
-                  </a>
-                </div>
-              </div>
+                  <div class='navbar-toggle' title='меню сайта'>
+                    <div class='bar1'></div>
+                    <div class='bar2'></div>
+                    <div class='bar3'></div>
+                  </div>
+                  <nav class="nav-hide">
+                    <ul id="perehod">
+                     <li><a href="#main">главная</a></li>
+                     <li><a href="#predlog">предложение</a></li>
+                     <li><a href="#carrousel">результат</a></li>
+                     <li><a href="#adwice">отзывы</a></li>
+                     <li><a href="#facts">факты</a></li>
+                     <li><a href="#certifications">сертификаты</a></li>
+                     <li><a href="#certifications">горячее предложение</a></li>
+                     <li><a href="#contacts">контакты</a></li>
+                   </ul>
+                 </nav>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
 
+       <div class="header_box">
+        <div class="row">
+          <div class="header_content clearfix">
+            <div class="header_content_item">
+              <div class="hc_title">
+                <h1>купите это сейчас</h1>
+                <h2>иначе вы никогда не вернетесь</h2>
+              </div>
+              <div class="hc_desc">
+                Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.
+              </div>
+              <div class="hc_link_box">
+                <a class="hc_link" href="#">Закажите сейчас</a>
+                <a class="hc_watch" href="https://www.youtube.com/watch?v=l9Ucv1W5f2M">просмотреть сейчас <i class="fa fa-play-circle-o" aria-hidden="true"></i></a>
+              </div>
             </div>
-          </div>
-          <!--start hidden-mnu -->
-          <div class="col-sm-12 col-xs-12 col-md-12">
-            <div class="top-menu hidden-mnu hidden-lg clearfix">
-              <ul>
-                <li><a href="#catalog">каталог</a></li>
-                <li><a href="#video">видео</a></li>
-                <li><a href="#consultation">консультации</a></li>
-                <li><a href="#adwiceme">отзывы</a></li>
-                <li><a href="#contacts">контакты</a></li>
-              </ul>
+            <div class="header_content_item">
+              <img src="images/header_fon.png" alt="флакон таблеток">
             </div>
-            <!--end hidden-mnu -->
           </div>
         </div>
-
-<div class="header_box">
-          <div class="row">
-            <div class="header_content clearfix">
-              <div class="header_content_item">
-                <div class="hc_title">
-                  <h1>купите это сейчас</h1>
-                  <h2>иначе вы никогда не вернетесь</h2>
-                </div>
-                <div class="hc_desc">
-                  Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.
-                </div>
-                <div class="hc_link_box">
-                  <a class="hc_link" href="#">Закажите сейчас</a>
-                  <a class="hc_watch" href="https://www.youtube.com/watch?v=l9Ucv1W5f2M">просмотреть сейчас <i class="fa fa-play-circle-o" aria-hidden="true"></i></a>
-                </div>
-              </div>
-              <div class="header_content_item">
-                <img src="images/header_fon.png" alt="флакон таблеток">
-              </div>
-            </div>
-          </div>
-          </div>
-      </header>
+      </div>
+    </header>
 
       <section class="block_numberfon">
         <div class="container">
@@ -122,9 +122,9 @@
         </div>
       </section>
 
-      <section class="block_feture">
+      <section class="block_feture" id="predlog">
         <div class="container">
-          <div class="block_feture-title"> <h2><span>предложения,</span>готовые для вас</h2></div>
+          <div class="block_feture-title"> <h2><span class="first_part">предложения,</span>готовые для вас</h2></div>
           <div class="block_feture-descr"> Не забудьте проветить реальный успех</div>
           <div class="row">
             <div class="feture_box">
@@ -141,12 +141,9 @@
                </div>
              </div>
              <div class="feture_box_items feture_box_items_img">
-<img src="images/two_persone.png" alt=" 2 персоны">
-
-
-
-             </div>
-             <div class="feture_box_items">
+              <img src="images/two_persone.png" alt=" 2 персоны">
+            </div>
+            <div class="feture_box_items">
               <div class="f_items">
                <div class="f_items_left_title">строительство тела</div>
                <div class="f_items_text f_items_left">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Имеет, они, наш?
@@ -165,141 +162,132 @@
 
    <section class="block_realresult" id="carrousel">
     <div class="container">
-      <div class="block_feture-title"> <h2><span>Реальный мужчина</span>реальные результаты</h2></div>
+      <div class="block_feture-title"> <h2><span class="first_part">Реальный мужчина</span>реальные результаты</h2></div>
       <div class="block_feture-descr"> Не забудьте проветить свидетельства этого реального успеха</div>
       <div class="row">
-          <div class="owl-carousel owl-theme " id="cor">
+        <div class="owl-carousel owl-theme " id="cor">
 
-            <div class="item">
-              <div class="result_box">
-                <div class="result_box_items">   <img src="images/mans.jpg" alt="мужчина">     </div>
-                <div class="result_box_items">
-                  <div class="result_items_text">
-                    <div class="result_weight">
-                      <div class="result_weight_left">87 <span class="rwl_w">кг</span> <span class="rwl_after">до</span></div>
-                      <div class="result_weight_left">63 <span class="rwl_w">кг</span> <span class="rwl_after">после</span></div>
-                    </div>
-                    <div class="result_name">Николай Адуйкин
-                      <span>возраст: 28</span>
-                    </div>
+          <div class="item">
+            <div class="result_box">
+              <div class="result_box_items">   <img src="images/mans.jpg" alt="мужчина">     </div>
+              <div class="result_box_items">
+                <div class="result_items_text">
+                  <div class="result_weight">
+                    <div class="result_weight_left">87 <span class="rwl_w">кг</span> <span class="rwl_after">до</span></div>
+                    <div class="result_weight_left">63 <span class="rwl_w">кг</span> <span class="rwl_after">после</span></div>
+                  </div>
+                  <div class="result_name">Николай Адуйкин
+                    <span>возраст: 28</span>
                   </div>
                 </div>
               </div>
             </div>
-
-
-       <div class="item">
-              <div class="result_box">
-                <div class="result_box_items">   <img src="images/mans.jpg" alt="мужчина">     </div>
-                <div class="result_box_items">
-                  <div class="result_items_text">
-                    <div class="result_weight">
-                      <div class="result_weight_left">87 <span class="rwl_w">кг</span> <span class="rwl_after">до</span></div>
-                      <div class="result_weight_left">63 <span class="rwl_w">кг</span> <span class="rwl_after">после</span></div>
-                    </div>
-                    <div class="result_name">Николай Адуйкин
-                      <span>возраст: 28</span>
-                    </div>
+          </div>
+          <div class="item">
+            <div class="result_box">
+              <div class="result_box_items">   <img src="images/mans.jpg" alt="мужчина">     </div>
+              <div class="result_box_items">
+                <div class="result_items_text">
+                  <div class="result_weight">
+                    <div class="result_weight_left">87 <span class="rwl_w">кг</span> <span class="rwl_after">до</span></div>
+                    <div class="result_weight_left">63 <span class="rwl_w">кг</span> <span class="rwl_after">после</span></div>
+                  </div>
+                  <div class="result_name">Николай Адуйкин
+                    <span>возраст: 28</span>
                   </div>
                 </div>
               </div>
             </div>
-
-       <div class="item">
-              <div class="result_box">
-                <div class="result_box_items">   <img src="images/mans.jpg" alt="мужчина">     </div>
-                <div class="result_box_items">
-                  <div class="result_items_text">
-                    <div class="result_weight">
-                      <div class="result_weight_left">87 <span class="rwl_w">кг</span> <span class="rwl_after">до</span></div>
-                      <div class="result_weight_left">63 <span class="rwl_w">кг</span> <span class="rwl_after">после</span></div>
-                    </div>
-                    <div class="result_name">Николай Адуйкин
-                      <span>возраст: 28</span>
-                    </div>
+          </div>
+          <div class="item">
+            <div class="result_box">
+              <div class="result_box_items">   <img src="images/mans.jpg" alt="мужчина">     </div>
+              <div class="result_box_items">
+                <div class="result_items_text">
+                  <div class="result_weight">
+                    <div class="result_weight_left">87 <span class="rwl_w">кг</span> <span class="rwl_after">до</span></div>
+                    <div class="result_weight_left">63 <span class="rwl_w">кг</span> <span class="rwl_after">после</span></div>
+                  </div>
+                  <div class="result_name">Николай Адуйкин
+                    <span>возраст: 28</span>
                   </div>
                 </div>
               </div>
             </div>
-
-         <div class="item">
-              <div class="result_box">
-                <div class="result_box_items">   <img src="images/mans.jpg" alt="мужчина">     </div>
-                <div class="result_box_items">
-                  <div class="result_items_text">
-                    <div class="result_weight">
-                      <div class="result_weight_left">87 <span class="rwl_w">кг</span> <span class="rwl_after">до</span></div>
-                      <div class="result_weight_left">63 <span class="rwl_w">кг</span> <span class="rwl_after">после</span></div>
-                    </div>
-                    <div class="result_name">Николай Адуйкин
-                      <span>возраст: 28</span>
-                    </div>
+          </div>
+          <div class="item">
+            <div class="result_box">
+              <div class="result_box_items">   <img src="images/mans.jpg" alt="мужчина">     </div>
+              <div class="result_box_items">
+                <div class="result_items_text">
+                  <div class="result_weight">
+                    <div class="result_weight_left">87 <span class="rwl_w">кг</span> <span class="rwl_after">до</span></div>
+                    <div class="result_weight_left">63 <span class="rwl_w">кг</span> <span class="rwl_after">после</span></div>
+                  </div>
+                  <div class="result_name">Николай Адуйкин
+                    <span>возраст: 28</span>
                   </div>
                 </div>
               </div>
             </div>
-
-           <div class="item">
-              <div class="result_box">
-                <div class="result_box_items">   <img src="images/mans.jpg" alt="мужчина">     </div>
-                <div class="result_box_items">
-                  <div class="result_items_text">
-                    <div class="result_weight">
-                      <div class="result_weight_left">87 <span class="rwl_w">кг</span> <span class="rwl_after">до</span></div>
-                      <div class="result_weight_left">63 <span class="rwl_w">кг</span> <span class="rwl_after">после</span></div>
-                    </div>
-                    <div class="result_name">Николай Адуйкин
-                      <span>возраст: 28</span>
-                    </div>
+          </div>
+          <div class="item">
+            <div class="result_box">
+              <div class="result_box_items">   <img src="images/mans.jpg" alt="мужчина">     </div>
+              <div class="result_box_items">
+                <div class="result_items_text">
+                  <div class="result_weight">
+                    <div class="result_weight_left">87 <span class="rwl_w">кг</span> <span class="rwl_after">до</span></div>
+                    <div class="result_weight_left">63 <span class="rwl_w">кг</span> <span class="rwl_after">после</span></div>
+                  </div>
+                  <div class="result_name">Николай Адуйкин
+                    <span>возраст: 28</span>
                   </div>
                 </div>
               </div>
             </div>
-
-     <div class="item">
-              <div class="result_box">
-                <div class="result_box_items">   <img src="images/mans.jpg" alt="мужчина">     </div>
-                <div class="result_box_items">
-                  <div class="result_items_text">
-                    <div class="result_weight">
-                      <div class="result_weight_left">87 <span class="rwl_w">кг</span> <span class="rwl_after">до</span></div>
-                      <div class="result_weight_left">63 <span class="rwl_w">кг</span> <span class="rwl_after">после</span></div>
-                    </div>
-                    <div class="result_name">Николай Адуйкин
-                      <span>возраст: 28</span>
-                    </div>
+          </div>
+          <div class="item">
+            <div class="result_box">
+              <div class="result_box_items">   <img src="images/mans.jpg" alt="мужчина">     </div>
+              <div class="result_box_items">
+                <div class="result_items_text">
+                  <div class="result_weight">
+                    <div class="result_weight_left">87 <span class="rwl_w">кг</span> <span class="rwl_after">до</span></div>
+                    <div class="result_weight_left">63 <span class="rwl_w">кг</span> <span class="rwl_after">после</span></div>
+                  </div>
+                  <div class="result_name">Николай Адуйкин
+                    <span>возраст: 28</span>
                   </div>
                 </div>
               </div>
             </div>
-
-      <div class="item">
-              <div class="result_box">
-                <div class="result_box_items">   <img src="images/mans.jpg" alt="мужчина">     </div>
-                <div class="result_box_items">
-                  <div class="result_items_text">
-                    <div class="result_weight">
-                      <div class="result_weight_left">87 <span class="rwl_w">кг</span> <span class="rwl_after">до</span></div>
-                      <div class="result_weight_left">63 <span class="rwl_w">кг</span> <span class="rwl_after">после</span></div>
-                    </div>
-                    <div class="result_name">Николай Адуйкин
-                      <span>возраст: 28</span>
-                    </div>
+          </div>
+          <div class="item">
+            <div class="result_box">
+              <div class="result_box_items">   <img src="images/mans.jpg" alt="мужчина">     </div>
+              <div class="result_box_items">
+                <div class="result_items_text">
+                  <div class="result_weight">
+                    <div class="result_weight_left">87 <span class="rwl_w">кг</span> <span class="rwl_after">до</span></div>
+                    <div class="result_weight_left">63 <span class="rwl_w">кг</span> <span class="rwl_after">после</span></div>
+                  </div>
+                  <div class="result_name">Николай Адуйкин
+                    <span>возраст: 28</span>
                   </div>
                 </div>
               </div>
             </div>
-
-
-      </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
 
-      <section class="block_adwice_fon">
+      <section class="block_adwice_fon" id="adwice">
         <div class="container">
-          <div class="block_feture-title"> <h2><span>Реальный мужчина</span>реальные результаты</h2></div>
+          <div class="block_feture-title"> <h2><span class="first_part">Реальный мужчина</span>реальные результаты</h2></div>
           <div class="block_feture-descr"> Не забудьте проветить свидетельства этого реального успеха</div>
           <div class="row">
             <!-- начало команды -->
@@ -361,9 +349,9 @@
         </div>
       </section>
 
-      <section class="supplement_facts">
+      <section class="supplement_facts" id="facts">
         <div class="container">
-          <div class="block_feture-title"> <h2><span>Дополнительные</span> факты</h2></div>
+          <div class="block_feture-title"> <h2><span  class="first_part">Дополнительные</span> факты</h2></div>
           <div class="block_feture-descr"> мы горды тем, что вам можем представить наш продукт </div>
           <div class="row">
             <div class="supplement_box">
@@ -393,7 +381,7 @@
         </div>
       </section>
 
-      <section class="certifications_block">
+      <section class="certifications_block" id="certifications">
         <div class="container">
           <div class="block_feture-title"> <h2>сертификаты</h2></div>
           <div class="block_feture-descr"> Мы не продаем несертифицированную продукцию </div>
@@ -444,24 +432,24 @@
 
      <section class="subscribe_block">
       <div class="container">
-       <div class="block_feture-title"> <h2><span>подписка</span> советы и предложения</h2></div>
+       <div class="block_feture-title"> <h2><span class="first_part">подписка</span> советы и предложения</h2></div>
        <div class="block_feture-descr"> Мы регулярно шлем нашим клиентам полезные советы и предложения</div>
-        <div class="row">
-          <div class="subscribe_inn">
+       <div class="row">
+        <div class="subscribe_inn">
 
-            <form id="form_podpiska" class="form_podpiska">
-              <input id="podpiska" class="input_podpiska"  type="text" placeholder="введите ваш e-mail">
-              <button class="podpiska_button">подписка</button>
-            </form>
-          </div>
-
+          <form id="form_podpiska" class="form_podpiska">
+            <input id="podpiska" class="input_podpiska"  type="text" placeholder="введите ваш e-mail">
+            <button class="podpiska_button">подписка</button>
+          </form>
         </div>
-      </div>
-    </section>
 
-   <section class="contact_block">
+      </div>
+    </div>
+  </section>
+
+   <section class="contact_block" id="contacts">
       <div class="container">
-       <div class="block_feture-title"> <h2><span>задайте</span>ваш вопрос</h2></div>
+       <div class="block_feture-title"> <h2><span class="first_part">задайте</span>ваш вопрос</h2></div>
        <div class="block_feture-descr"> Мы всегда рады поддержать наших клиентов</div>
         <div class="row">
 

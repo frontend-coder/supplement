@@ -4864,7 +4864,9 @@ img.mfp-img {
   opacity: 1;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   outline: none;
@@ -5000,7 +5002,12 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   padding: 0;
 }
@@ -5023,6 +5030,9 @@ li {
   display: block;
   width: 100%;
   height: auto;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .hidden {
@@ -5133,6 +5143,9 @@ content: '\f095';
   width: 100%;
   position: fixed;
   z-index: 100;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .top_line_box {
@@ -5150,6 +5163,17 @@ content: '\f095';
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-bottom: 1px solid #ebebeb;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.tlb_active {
+  height: 72px;
+}
+
+.tlb_image {
+  width: 80%;
 }
 
 .top_line_logo {
@@ -5311,6 +5335,15 @@ nav ul li a {
   color: inherit;
   font-weight: bolder;
   text-decoration: none;
+  -webkit-transition: all 0.52s ease;
+  -o-transition: all 0.52s ease;
+  transition: all 0.52s ease;
+  cursor: pointer;
+}
+
+nav ul li a.mPS2id-highlight,
+nav ul li a:hover {
+  color: #fcac45;
 }
 
 .navbar-toggle {
@@ -6517,7 +6550,6 @@ content: '\f095';
   margin-top: 10px;
  } */
 /* стили формы обратной связи */
-/* стили формы обратной связи */
 .forms-call {
   width: 100%;
   margin: 0 auto;
@@ -6560,7 +6592,7 @@ content: '\f095';
 }
 
 .input-border {
-  border: 1px solid #E5722C;
+  border: 1px solid #18a3dd;
 }
 
 .input_form:focus,
@@ -6609,7 +6641,7 @@ content: '\f095';
 
 .checkbox_box {
   margin: 10px auto;
-  width: 90%;
+  width: 100%;
   padding: 0;
   color: #fff;
 }
@@ -6621,12 +6653,10 @@ content: '\f095';
 
 .radioterms {
   width: 10%;
-  float: left;
   margin-top: 10px;
 }
 
 .link_form {
-  float: right;
   color: #95989A;
   width: 87%;
   top: -6px;
@@ -6639,7 +6669,6 @@ content: '\f095';
   content: '';
   display: inline-block;
   position: absolute;
-  border-bottom: 1px dashed #95989A;
   top: 112%;
   width: 78%;
 }
@@ -6648,7 +6677,6 @@ content: '\f095';
   content: '';
   display: inline-block;
   position: absolute;
-  border-bottom: 1px dashed #95989A;
   top: 112%;
   width: 58%;
 }
@@ -6701,7 +6729,7 @@ content: '\f095';
 }
 
 .form-callback_iner {
-  background-color: #FF8941;
+  background-color: #18a3dd;
   padding-top: 20px;
 }
 
@@ -6732,7 +6760,7 @@ content: '\f095';
 .fcb {
   margin: 0;
   padding: 0;
-  background-color: #FF8941;
+  background-color: #18a3dd;
 }
 
 .form-callback_item {
@@ -6749,8 +6777,8 @@ content: '\f095';
   margin: 20px auto 0;
   height: 261px;
   text-align: center;
-  background: #FF8941 url("../images/septik-ergobox_327.png") center center no-repeat;
-  background-size: 286px 261px;
+  background: #18a3dd url("../img/boult-pils-forms.png") center center no-repeat;
+  background-size: 200px 260px;
 }
 
 .form-callback_item .input_form {
@@ -6760,6 +6788,7 @@ content: '\f095';
 
 .label_name {
   margin-left: 5%;
+  color: #fff;
 }
 
 .form-callback .button-call {
@@ -6773,9 +6802,50 @@ content: '\f095';
   color: #fff;
 }
 
-.form-callback .link_form:before {
-  border-bottom: 1px dashed #fff;
-  width: 75%;
+/* Hide original inputs */
+.checkbox_box input[type=checkbox], input[type=radio] {
+  display: none;
+}
+
+/* Checkboxes */
+.checkbox_box input[type=checkbox] + label span {
+  border: 1px solid #fff;
+  font-size: 24pt;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 0.25em;
+  margin: 4px 8px 8px 8px;
+  padding: 2px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.checkbox_box input[type=checkbox]:checked + label span::after {
+  content: "\2713";
+}
+
+.contact_block .checkbox_box input[type=checkbox] + label span {
+  border: 1px solid #ababab;
+}
+
+.submit_bb {
+  display: inline-block;
+  padding: 15px 40px;
+  background-color: #017D61;
+  border-radius: 30px;
+  font-weight: 800;
+  border: none;
+  color: #f1f1f1;
+  cursor: pointer;
+  text-transform: uppercase;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.submit_bb:hover {
+  background-color: #019675;
 }
 
 /*
@@ -6787,12 +6857,15 @@ content: '\f095';
   opacity: 1;
   width: 30px;
   height: 30px;
-  line-height: 30px;
+  line-height: .95;
   /*  // font-size: $size; */
-  font-size: 1.875rem;
+  font-size: 1.625rem;
+  text-align: center;
+  padding: 0;
   border-radius: 50%;
-  background-color: #95989A;
-  border: 1px solid #fff;
+  background-color: #18a3dd;
+  border: 3px solid #fff;
+  color: #fff;
   -webkit-transition: all .75s ease;
   -o-transition: all .75s ease;
   transition: all .75s ease;
@@ -6802,109 +6875,6 @@ content: '\f095';
   color: #1a1a1a;
 }
 
-/*
-стили оформления всплывашки политика кон */
-.politiks_popup {
-  background-color: transparent;
-  padding: 15px;
-  position: relative;
-  -webkit-transition: all 0.5s else;
-  -o-transition: all 0.5s else;
-  transition: all 0.5s else;
-  color: #000;
-  max-width: 750px;
-  margin: auto;
-}
-
-.politiks_popup_block {
-  padding: 10px;
-  background-color: #fff;
-}
-
-.politiks_popup_block h4 {
-  /*  // font-size: $size; */
-  font-size: 1.25rem;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.politiks_popup_block h5 {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-left: 10px;
-  padding-bottom: 5px;
-}
-
-.politiks_popup_block p {
-  /*  // font-size: $size; */
-  font-size: 0.875rem;
-}
-
-.politiks_popup_block ul {
-  padding: 0 0 0 10px;
-  font-weight: bold;
-  /*  // font-size: $size; */
-  font-size: 1rem;
-  padding-bottom: 5px;
-}
-
-.politiks_popup_block ul li {
-  /* padding-top: 10px;
-  padding-bottom: 10px; */
-  font-weight: normal;
-  /*  // font-size: $size; */
-  font-size: 0.875rem;
-}
-
-.politiks_popup_block ul li ul li {
-  list-style-type: disc;
-}
-
-.politiks_popup_block ul li span {
-  font-weight: bold;
-}
-
-.fc-avtorpolit {
-  text-align: right;
-  font-size: 1rem;
-}
-
-.fc-avtorpolit a,
-.politiks_popup_block ul li a {
-  color: #FF9900;
-  text-decoration: none;
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-
-.politiks_popup_block ul li a:hover,
-.politiks_popup_block a:hover {
-  text-decoration: underline;
-}
-
-.politiks_popup_block .mfp-close {
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  padding: 0;
-  width: 30px;
-  font-size: 30px;
-  height: 30px;
-  line-height: 23px;
-  opacity: .7;
-  border-radius: 50%;
-  border: 2px solid #FF7800;
-  -webkit-transition: all 0.5s ease 0.1s;
-  -o-transition: all 0.5s ease 0.1s;
-  transition: all 0.5s ease 0.1s;
-}
-
-.politiks_popup_block .mfp-close:hover {
-  opacity: 1.0;
-}
-
-/* // переписать */
 .forms-calldecor {
   position: relative;
 }
@@ -6925,17 +6895,17 @@ content: '\f095';
   display: flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
   -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   opacity: 0;
   padding-right: 20px;
   padding-left: 20px;
@@ -6956,8 +6926,8 @@ content: '\f095';
   display: -ms-flexbox;
   display: flex;
   -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
   color: #fff;
   font-size: 20px;
   margin: auto;
@@ -6995,16 +6965,16 @@ content: '\f095';
   -o-transition: all 0.615s ease-out;
   transition: all 0.615s ease-out;
   -webkit-transform: translateY(1%);
-  -ms-transform: translateY(1%);
-  transform: translateY(1%);
+      -ms-transform: translateY(1%);
+          transform: translateY(1%);
 }
 
 /* content animate out */
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
   opacity: 0;
   -webkit-transform: translateY(-120%);
-  -ms-transform: translateY(-120%);
-  transform: translateY(-120%);
+      -ms-transform: translateY(-120%);
+          transform: translateY(-120%);
 }
 
 .footer_fob {
@@ -7027,14 +6997,6 @@ content: '\f095';
   color: transparent;
 }
 
-/* :-webkit-input-placeholder       {text-indent: 0px;   transition: text-indent 0.3s ease;}
-:-moz-placeholder                {text-indent: 0px;   transition: text-indent 0.3s ease;}
-:-moz-placeholder                 {text-indent: 0px;   transition: text-indent 0.3s ease;}
-:-ms-input-placeholder            {text-indent: 0px;   transition: text-indent 0.3s ease;}
-:focus::-webkit-input-placeholder {text-indent: 110%; transition: text-indent 0.3s ease;}
-:focus::-moz-placeholder          {text-indent: 110%; transition: text-indent 0.3s ease;}
-:focus:-moz-placeholder           {text-indent: 110%; transition: text-indent 0.3s ease;}
-:focus:-ms-input-placeholder      {text-indent: 110%; transition: text-indent 0.3s ease;} */
 /* // задать все переменные
  */
 /* p {

@@ -26,13 +26,14 @@ header */
 .block_numberbox_boult {
  position: relative;
 }
-
-.block_numberbox_boult img {
+.block_numberbox_boult_img {
  position: absolute;
- top: -240px;
+ top: -216px;
  left: -100px;
+ width: 404px;
+ height: 525px;
+ background-image: url('../img/boult-pils.png');
 }
-
 .numberbox_num {
  color: #fff;
  text-align: center;
@@ -828,7 +829,7 @@ font-weight: 800;
  transform: translateY(50%);
  width: 60px;
  height: 60px;
- line-height: 60px;
+ //line-height: 60px;
  border-radius: 50%;
  background-color: transparent;
  color: transparent;
@@ -847,29 +848,26 @@ font-weight: 800;
  right: -60px;
  transform: translateX(100%);
 }
-
+#carrousel .owl-nav .owl-next:before,
 #carrousel .owl-nav .owl-prev:before {
  position: absolute;
- content: "\f060";
- font-family: "FontAwesome";
+ top: 50%;
+left: 50%;
+ margin-right: -50%;
+transform: translate(-50%, -50%);
  text-align: center;
- line-height: 60px;
  font-weight: normal;
- @include font-size(26px);
+ font-family: "FontAwesome";
  color: #c6cfd2;
+  @include font-size(26px);
 }
-
+#carrousel .owl-nav .owl-prev:before {
+ content: "\f060";
+}
 #carrousel .owl-nav .owl-next:before {
- position: absolute;
  content: "\f061";
- font-family: "FontAwesome";
- text-align: center;
- font-weight: normal;
- @include font-size(26px);
- color: #c6cfd2;
 }
 
 #carrousel .owl-theme .owl-dots {
  padding-top: 55px;
 }
-

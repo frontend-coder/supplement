@@ -52,7 +52,7 @@ gulp.task('styles', () => {
 gulp.task('scripts', done => {
 	var jsFiles = [
 'app/libs/plagins/jquery/jquery-3.2.1.min.js',
-'app/libs/plagins/nicescroll/jquery.nicescroll.min.js',
+
 'app/libs/plagins/jQuery-Mask/jquery.mask.min.js',
 'app/libs/plagins/magnific-popup/jquery.magnific-popup.min.js',
 'app/libs/plagins/jquery.PageScroll2id/jquery.PageScroll2id.min.js',

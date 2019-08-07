@@ -1,7 +1,4 @@
 $(document).ready(function() {
- $("body").niceScroll({
-  horizrailenabled: false
- });
 
  $(function() {
   $('.navbar-toggle, nav').click(function() {
@@ -27,18 +24,6 @@ $(document).ready(function() {
   checkStickyMenu();
  })
 
- // pagination on lending pages
- $("#perehod li a").mPageScroll2id({
-  layout: "auto",
-  offset: ".top_line",
-  scrollEasing: "linear",
-  highlightByNextTarget: true,
-  keepHighlightUntilNext: true,
-  autoScrollSpeed: true,
-  scrollSpeed: 1000
- });
-
-
     /* Page Scroll to id fn call */
     $("#perehod li a").mPageScroll2id({
         layout: "auto",
@@ -54,18 +39,6 @@ $(document).ready(function() {
         var to = $(this).parent().parent("section").next().attr("id");
         $.mPageScroll2id("scrollTo", to);
     });
-
-
-
-
-
-
-
-
-
-
-
-
 
  $(function() {
   $("#phone_key").mask("+7(000)000-00-00", { placeholder: "+7(___)___-__-__", clearIfNotMatch: true });
@@ -101,7 +74,6 @@ $(document).ready(function() {
  });
  $('#trade_mark_carousel').owlCarousel({
   loop: true,
-  items: 5,
   margin: 30,
   slideSpeed: 2500,
   //	autoplay             : true,
@@ -111,7 +83,21 @@ $(document).ready(function() {
   mouseDrag: true,
   touchDrag: true,
   stagePadding: 30,
-  stopOnHover: false
+  stopOnHover: false,
+    responsive: {
+   0: {
+    items: 1,
+   },
+      480: {
+    items: 2,
+   },
+   768: {
+    items: 3,
+   },
+   961: {
+    items: 5,
+   }
+  },
 
  });
 
@@ -122,13 +108,10 @@ $(document).ready(function() {
   dots: true,
   //  navText: ['<i class="fas fa-chevron-left"></i>','<i class="fas fa-chevron-right"></i>'],
   responsive: {
-   0: {
+   320: {
     items: 1,
    },
-   768: {
-    items: 2,
-   },
-   990: {
+   961: {
     items: 2,
    }
   },

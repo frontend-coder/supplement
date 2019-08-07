@@ -7,70 +7,15 @@
 	url("../fonts/LatoLight/LatoLight.woff") format("woff"),
 	url("../fonts/LatoLight/LatoLight.ttf") format("truetype");
 	font-style: normal;
-	font-weight: normal;
+	font-weight: 200;
 }
-@font-face {
-	font-family: "LatoBold";
-	src: url("../fonts/LatoBold/LatoBold.eot?#iefix")format("embedded-opentype"),
-	url("../fonts/LatoBold/LatoBold.woff") format("woff"),
-	url("../fonts/LatoBold/LatoBold.ttf") format("truetype");
-	font-style: normal;
-	font-weight: normal;
-}
-@font-face {
-	font-family: "LatoLightItalic";
-	src: url("../fonts/LatoLightItalic/LatoLightItalic.eot?#iefix")format("embedded-opentype"),
-	url("../fonts/LatoLightItalic/LatoLightItalic.woff") format("woff"),
-	url("../fonts/LatoLightItalic/LatoLightItalic.ttf") format("truetype");
-	font-style: normal;
-	font-weight: normal;
-}
+
 /* font-family: "HelveticaNeueLTStd-Hv"; */
 @font-face {
 	font-family: "HelveticaNeueLTStd-Hv";
 	src: url("../fonts/HelveticaNeueLTStd-Hv/HelveticaNeueLTStd-Hv.eot?#iefix")format("embedded-opentype"),
 	url("../fonts/HelveticaNeueLTStd-Hv/HelveticaNeueLTStd-Hv.woff") format("woff"),
 	url("../fonts/HelveticaNeueLTStd-Hv/HelveticaNeueLTStd-Hv.ttf") format("truetype");
-	font-style: normal;
-	font-weight: normal;
-}
-@font-face {
-	font-family: "RalewayHeavy";
-	src: url("../fonts/RalewayHeavy/Raleway-Heavy.eot?#iefix")format("embedded-opentype"),
-	url("../fonts/RalewayHeavy/Raleway-Heavy.woff") format("woff"),
-	url("../fonts/RalewayHeavy/Raleway-Heavy.ttf") format("truetype");
-	font-style: normal;
-	font-weight: normal;
-}
-@font-face {
-	font-family: "RalewayExtraBold";
-	src: url("../fonts/RalewayExtraBold/RalewayExtraBold.eot?#iefix")format("embedded-opentype"),
-	url("../fonts/RalewayExtraBold/RalewayExtraBold.woff") format("woff"),
-	url("../fonts/RalewayExtraBold/RalewayExtraBold.ttf") format("truetype");
-	font-style: normal;
-	font-weight: normal;
-}
-@font-face {
-	font-family: "LatoBlack";
-	src: url("../fonts/LatoBlack/lato-black.eot?#iefix")format("embedded-opentype"),
-	url("../fonts/LatoBlack/lato-black.woff") format("woff"),
-	url("../fonts/LatoBlack/lato-black.ttf") format("truetype");
-	font-style: normal;
-	font-weight: normal;
-}
-@font-face {
-	font-family: "RalewayLight";
-	src: url("../fonts/RalewayLight/RalewayLight.eot?#iefix")format("embedded-opentype"),
-	url("../fonts/RalewayLight/RalewayLight.woff") format("woff"),
-	url("../fonts/RalewayLight/RalewayLight.ttf") format("truetype");
-	font-style: normal;
-	font-weight: normal;
-}
-@font-face {
-	font-family: "RalewayBold";
-	src: url("../fonts/RalewayBold/RalewayBold.eot?#iefix")format("embedded-opentype"),
-	url("../fonts/RalewayBold/RalewayBold.woff") format("woff"),
-	url("../fonts/RalewayBold/RalewayBold.ttf") format("truetype");
 	font-style: normal;
 	font-weight: normal;
 }

@@ -7,7 +7,6 @@
  align-items: center;
 }
 
-
 .top_line {
   top:0;
   left:0;
@@ -37,6 +36,7 @@
   height: 64px;
   float:left;
 }
+
 .top_line_text {
   @include font-size(15px);
   line-height: 64px;
@@ -47,16 +47,11 @@
 }
 
 .header_box {
-    width: 1170px;
-    margin: 0 auto;
-  }
-
-
+  width: 1170px;
+  margin: 0 auto;
+}
 
 /* стили оформления контента в хедере */
-.header_content {
-  // padding: 15% 0;
-}
 
 .header_content_item {
   width: 50%;
@@ -69,6 +64,7 @@
   width: 100%;
   height: auto;
 }
+
 .hc_title {
   border-left:5px solid $acsent_colir;
   padding-left: 30px;
@@ -77,16 +73,17 @@
 }
 
 .hc_title h1 {
-  font-family: "RalewayHeavy", sans-serif;
+  font-family: "HelveticaNeueLTStd-Hv", sans-serif;
   @include font-size(48px);
   line-height: (35px / 72px);
   text-transform: uppercase;
   margin-bottom: 23px;
+  font-weight: 600;
 }
 .hc_title h2 {
   @include font-size(24px);
   line-height: 1;
-  font-family: "RalewayExtraBold", sans-serif;
+  font-family: "HelveticaNeueLTStd-Hv", sans-serif;
 }
 .hc_desc {
   margin-bottom: 44px;
@@ -101,131 +98,41 @@
   padding: 17px 35px;
   font-family: "LatoBold", sans-serif;
   @include trans;
-
 }
+
 .hc_link:hover {
   background-color: lighten($acsent_colir, 10%);
 }
 
 .hc_watch {
   padding: 0 30px;
- @include font-size(16px);
- text-align: center;
- font-family: "LatoBold", sans-serif;
- color:#333740;
- text-transform: uppercase;
+  @include font-size(16px);
+  text-align: center;
+  font-family: "LatoBold", sans-serif;
+  color:#333740;
+  text-transform: uppercase;
 }
 
 .hc_watch:hover {
-color: lighten(#333740, 10%);
-text-decoration: underline;
-  }
-  .hc_watch .fa {
-    margin-left: 5px;
-    @include font-size(20px);
-color:$acsent_colir;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  color: lighten(#333740, 10%);
+  text-decoration: underline;
+}
+.hc_watch .fa {
+  margin-left: 5px;
+  @include font-size(20px);
+  color:$acsent_colir;
+}
 
 /*  оформление мобильной версии меню и гамбургера */
 .mobile_gamburger {
  padding: 0;
  margin: 0;
  width: 45px;
-  height: 33px;
+ height: 33px;
  position: relative;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-nav,
-.navbar-toggle {
+nav, .navbar-toggle {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -258,14 +165,15 @@ nav ul {
 nav ul li { list-style: none; }
 
 nav ul li a {
-  font-size: 35pt;
+ @include font-size(35px);
+  text-transform: uppercase;
   color: inherit;
   font-weight: bolder;
   text-decoration: none;
 }
 
 .navbar-toggle {
-position: absolute;
+  position: absolute;
   top: 0;
   right: 0;
   width: 45px;
@@ -274,22 +182,22 @@ position: absolute;
   cursor: pointer;
 }
 
-.bar1,
-.bar2,
-.bar3 {
+.bar1, .bar2, .bar3 {
   width: 100%;
   height: 3px;
   margin-bottom: 10px;
   background-color: #1c1f72;
   transition: all 0.3s ease-in-out;
 }
+
 .fixed {
 position:fixed; /*позицианируем чтобы исчез скролл*/
 width:100%; /*что бы верстка не складывалась по ширине*/
 }
-.navbar-on .bar1,
-.navbar-on .bar2,
-.navbar-on .bar3 { background-color: white; }
+
+.navbar-on .bar1, .navbar-on .bar2,
+.navbar-on .bar3 {
+ background-color: white; }
 
 .navbar-on .bar1 {
   transform-origin: 10% 40%;

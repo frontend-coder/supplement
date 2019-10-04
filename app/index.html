@@ -67,7 +67,7 @@
        Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.
       </div>
       <div class="hc_link_box">
-       <a class="hc_link" href="#call-backtimer">Закажите сейчас</a>
+       <a id="call-backtime" value="ckbr gj ryjgrt" class="hc_link" data-target="ckbr gj ryjgrt" href="#call-backtimer">Закажите сейчас</a>
        <a class="hc_watch" href="https://www.youtube.com/watch?v=l9Ucv1W5f2M">просмотреть сейчас <i class="fa fa-play-circle-o" aria-hidden="true"></i></a>
       </div>
      </div>
@@ -484,6 +484,8 @@
    <div class="row">
     <div class="subscribe_inn">
      <form id="form_podpiska" class="form_podpiska">
+   <input type="hidden" name="admin-data" value="форма размещена блоке подписка">
+   <input type="hidden" name="formaone" name="phone" value="форма размещена не во всплывающем окне">
       <input id="podpiska" class="input_podpiska" type="text" placeholder="введите ваш e-mail">
       <button class="podpiska_button">подписка</button>
      </form>
@@ -500,8 +502,10 @@
    <div class="block_feture-descr"> Мы всегда рады поддержать наших клиентов</div>
    <div class="row">
     <form class="contact_form">
-     <input type="text" class="contact_input" placeholder="Имя">
-     <input type="text" class="contact_input contact_input_two" placeholder="Email">
+   <input type="hidden" name="admin-data" value="форма размещена в блоке контакты">
+   <input type="hidden" name="formaone" value="форма размещена в блоке контакты">
+     <input type="text" class="contact_input"  name="name" placeholder="Имя">
+     <input type="text" class="contact_input contact_input_two" name="phone" placeholder="Email">
      <input type="text" class="contact_subgect contact_input" placeholder="Тема обращения">
      <textarea class="contact_textarea" placeholder="Текст обращения"></textarea>
      <button class="contact_button">послать</button>
@@ -545,7 +549,7 @@
  <!--оформление скрытой всплывающей формы женщины с таймером -->
  <div class="hidden">
   <form class="forms-call form-callback forms-calldecor" id="call-backtimer">
-   <input type="hidden" name="admin-data">
+   <input type="hidden" name="admin-data" value="форма размещена во всплывающем окне">
    <input type="hidden" name="formaone" value="форма размещена во всплывающем окне">
    <div class="success">
     <p>Спасибо за заявку</p>
@@ -558,7 +562,7 @@
      </div>
      <div class="form-callback_item">
       <label> <span class="label_name">Ваше имя</span>
-       <input id="author_two" class="input_form" type="text" name="author" value="" placeholder="Например, Олег Юрьевич" required="required" />
+       <input id="author_two" class="input_form" type="text" name="name" value="" placeholder="Например, Олег Юрьевич" required="required" />
       </label>
       <label><span class="label_name">Телефон</span>
        <input id="phone_key" class="input_form" type="tel" name="phone" value="" required="required" />

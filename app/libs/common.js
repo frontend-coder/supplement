@@ -145,7 +145,6 @@ $(document).ready(function() {
   type: 'inline'
  });
 
-
  /*чтобы в формах был индивидуальный заголовок */
  $("a[href='#call-backtimer']").click(function() {
   var dataForm = $(this).data("form");

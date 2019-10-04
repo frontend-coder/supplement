@@ -164,6 +164,7 @@ $color_formes: #18a3dd;
 стилизую форму всплывашку для обратной связи */
 .form-callback {
  max-width: 750px;
+ min-width: 300px;
  overflow: hidden;
  padding: 20px;
  position: relative;

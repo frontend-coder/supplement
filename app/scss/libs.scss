@@ -1,5 +1,6 @@
-@import 'app/libs/plagins/bootstrap/bootstrap';
-@import 'app/libs/plagins/font-awesome/scss/font-awesome.scss';
+@import "../libs/grid/normalise";
+@import "../libs/grid/grid";
+@import "../libs/plagins/font-awesome-4.7.0/css/font-awesome";
 @import 'app/libs/plagins/magnific-popup/magnific-popup';
-@import 'app/libs/plagins/owlcarousel/assets/owl.carousel';
-@import 'app/libs/plagins/owlcarousel/assets/owl.theme.default';
+@import 'app/libs/plagins/OwlCarousel/OwlCarousel/dist/assets/owl.carousel.min';
+@import 'app/libs/plagins/OwlCarousel/OwlCarousel/dist/assets/owl.theme.default.min';

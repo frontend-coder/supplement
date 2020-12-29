@@ -66,10 +66,10 @@ function scripts() {
 	return src([
 'app/libs/plagins/jquery341.js',
 'app/libs/plagins/jQuery-Mask/jquery.mask.min.js',
-'app/libs/plagins/page-scroll-to-id-master/js/minified/jquery.malihu.PageScroll2id.min.js',
-'app/libs/plagins/magnific-popup/jquery.magnific-popup.min.js',
-'app/libs/plagins/OwlCarousel/OwlCarousel/dist/owl.carousel.min.js',
-'app/libs/common.js'
+'app/libs/plagins/page-scroll-to-id-master/jquery.malihu.PageScroll2id.js',
+'app/libs/plagins/magnific-popup/dist/jquery.magnific-popup.min.js',
+'app/libs/plagins/OwlCarousel/dist/owl.carousel.min.js',
+		'app/libs/common.js'
 	])
 		.pipe(strip())
 		.pipe(rigger())
@@ -106,8 +106,8 @@ function startwatch() {
 function buildcopy() {
 	return src(['app/css/**/*.min.css',
 		'app/js/**/*.min.js',
-		'app/**/*.html',
-		'app/**/*.php',
+		'app/*.html',
+		'app/*.php',
 		'app/**/ht.access'], {base:'app'})
 .pipe(dest('dest'))
 }

@@ -1,21 +1,23 @@
-@import '_var.scss';
+@import "_var.scss";
 
 /* font-family: "LatoLight"; */
 @font-face {
-	font-family: "LatoLight";
-	src: url("../fonts/LatoLight/LatoLight.eot?#iefix")format("embedded-opentype"),
-	url("../fonts/LatoLight/LatoLight.woff") format("woff"),
-	url("../fonts/LatoLight/LatoLight.ttf") format("truetype");
-	font-style: normal;
-	font-weight: 200;
+  src:
+    url("../fonts/LatoLight/LatoLight.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/LatoLight/LatoLight.woff") format("woff"),
+    url("../fonts/LatoLight/LatoLight.ttf") format("truetype");
+  font-family: "LatoLight";
+  font-weight: 200;
+  font-style: normal;
 }
 
 /* font-family: "HelveticaNeueLTStd-Hv"; */
 @font-face {
-	font-family: "HelveticaNeueLTStd-Hv";
-	src: url("../fonts/HelveticaNeueLTStd-Hv/HelveticaNeueLTStd-Hv.eot?#iefix")format("embedded-opentype"),
-	url("../fonts/HelveticaNeueLTStd-Hv/HelveticaNeueLTStd-Hv.woff") format("woff"),
-	url("../fonts/HelveticaNeueLTStd-Hv/HelveticaNeueLTStd-Hv.ttf") format("truetype");
-	font-style: normal;
-	font-weight: normal;
+  src:
+    url("../fonts/HelveticaNeueLTStd-Hv/HelveticaNeueLTStd-Hv.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/HelveticaNeueLTStd-Hv/HelveticaNeueLTStd-Hv.woff") format("woff"),
+    url("../fonts/HelveticaNeueLTStd-Hv/HelveticaNeueLTStd-Hv.ttf") format("truetype");
+  font-family: "HelveticaNeueLTStd-Hv";
+  font-weight: 400;
+  font-style: normal;
 }

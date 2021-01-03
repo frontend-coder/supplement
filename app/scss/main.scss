@@ -209,6 +209,12 @@ li {
   margin-bottom: 44px;
 }
 
+.hc_link_box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 .hc_link {
   @include font-size(16px);
   @include trans;
@@ -217,6 +223,7 @@ li {
   border-radius: 40px;
   padding: 17px 35px;
   font-family: "LatoBold", sans-serif;
+  white-space: nowrap;
   color: #ffffff;
   background-color: $acsent_colir;
 }
@@ -228,8 +235,9 @@ li {
 .hc_watch {
   @include font-size(16px);
 
-  padding: 0 30px;
+  padding: 0 20px;
   font-family: "LatoBold", sans-serif;
+  white-space: nowrap;
   text-align: center;
   text-transform: uppercase;
   color: #333740;
@@ -490,7 +498,8 @@ header */
 
 .feture_box {
   display: flex;
-  align-items: center;
+
+  // align-items: center;
   justify-content: space-between;
   margin: 0;
   padding: 0;
@@ -1018,6 +1027,7 @@ footer {
   margin-bottom: 50px;
   border: none;
   border-bottom: 1px solid #ebebeb;
+  padding-left: 10px;
   width: 100%;
   height: 150px;
   color: #ababab;
@@ -1876,6 +1886,14 @@ input[type="radio"] {
     display: flex;
     align-items: center;
   }
+
+  .podpiska_button {
+    font-size: 0.8rem;
+  }
+
+  .supplement_link {
+    font-size: 0.8rem;
+  }
 }
 
 @media only screen and (max-width: 834px) {
@@ -2057,13 +2075,14 @@ input[type="radio"] {
   .first_part::before {
     content: "";
     position: absolute;
-    left: 0;
+    left: 50%;
 
     //   margin-right: -40px;
     bottom: 10px;
     width: 80px;
     height: 3px;
     background-color: #18a3dd;
+    transform: translateX(-50%);
   }
 
   .subscribe_inn {
@@ -2149,7 +2168,12 @@ input[type="radio"] {
   }
 
   .form-callback_item {
-    float: right;
+    float: none;
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  .input_form {
     width: 100%;
   }
 
@@ -2272,8 +2296,27 @@ input[type="radio"] {
     margin-bottom: 0;
   }
 
+  nav {
+    overflow: auto;
+  }
+
   nav ul li a {
-    font-size: 1.95rem;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.4rem;
+  }
+
+  .hc_link_box {
+    flex-wrap: wrap;
+  }
+
+  .full__form__label {
+    width: 100%;
+  }
+
+  .subscribe_inn {
+    width: 100%;
   }
 }
 
@@ -2284,30 +2327,53 @@ input[type="radio"] {
     text-align: left;
   }
 
-  .block_feture-title .first_part::before,
-  .subscribe_block .first_part::before,
-  .supplement_facts .first_part::before {
-    right: 0;
-    margin-left: 40px;
-    text-align: center;
-    transform: translateX(50%);
-  }
+  // .block_feture-title .first_part::before,
+  // .subscribe_block .first_part::before,
+  // .supplement_facts .first_part::before {
+  //   right: 0;
+  //   margin-left: 40px;
+  //   text-align: center;
+  //   transform: translateX(50%);
+  // }
 
   .form_podpiska .form__label {
-    width: 75%;
+    width: 70%;
   }
 
-  .input_podpiska {
-    width: 96%;
+  .form_podpiska .podpiska_button {
+    width: 30%;
   }
+
+  // .input_podpiska {
+  //   width: 96%;
+  // }
 
   .podpiska_button {
-    width: 60%;
+    width: 30%;
   }
 
   .contact_input {
     margin-right: 0;
     width: 100%;
+  }
+
+  .box-adwice_img,
+  .box-adwice_text {
+    float: none;
+    margin: 0 auto;
+  }
+
+  .supplement_items img {
+    display: block;
+    margin: 0 auto 46px;
+  }
+
+  .f_items:last-child {
+    margin-bottom: 40px;
+  }
+
+  .box-adwice_img {
+    margin-bottom: 10px;
   }
 }
 
@@ -2327,7 +2393,6 @@ input[type="radio"] {
   }
 
   .link_form a {
-    font-size: 1.11rem;
     line-height: 1.1;
   }
 
@@ -2348,6 +2413,7 @@ input[type="radio"] {
 
   .result_weight {
     flex-wrap: wrap;
+    margin-bottom: 5px;
     padding: 0;
   }
 
@@ -2360,12 +2426,21 @@ input[type="radio"] {
     font-size: 1.7rem;
   }
 
-  .result_weight {
-    margin-bottom: 5px;
+  .form-callback h5 {
+    width: 90%;
+    font-size: 1.1rem;
+  }
+
+  .link_form a {
+    font-size: 0.85rem;
   }
 }
 
 @media only screen and (max-width: 375px) {
+  .checkbox_box {
+    text-align: left;
+  }
+
   #carrousel .owl-nav .owl-next,
   #carrousel .owl-nav .owl-prev {
     display: none;
@@ -2376,11 +2451,23 @@ input[type="radio"] {
   }
 }
 
-@media only screen and (max-width: 360px) {}
+@media only screen and (max-width: 360px) {
+  .form-callback h4 {
+    font-size: 1.1rem;
+  }
+
+  .link_form a {
+    font-size: 0.75rem;
+  }
+}
 
 @media only screen and (max-width: 320px) {
   .suplement_order_title {
     font-size: 1.475rem;
+  }
+
+  .form-callback h4 {
+    font-size: 1rem;
   }
 
   .subscribe_inn {

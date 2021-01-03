@@ -67,7 +67,8 @@ function scripts() {
 'app/libs/plagins/jquery341.js',
 'app/libs/plagins/jQuery-Mask/jquery.mask.min.js',
 'app/libs/plagins/page-scroll-to-id-master/jquery.malihu.PageScroll2id.js',
-'app/libs/plagins/magnific-popup/dist/jquery.magnific-popup.min.js',
+		'app/libs/plagins/magnific-popup/dist/jquery.magnific-popup.min.js',
+'app/libs/plagins/valid.js',
 'app/libs/plagins/OwlCarousel/dist/owl.carousel.min.js',
 		'app/libs/common.js'
 	])

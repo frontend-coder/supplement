@@ -580,6 +580,7 @@ header */
   min-height: 560px;
   background: #000000 url("../img/adwice_fon.jpg") center center no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .block_adwice_fon .block_feture-title h2 {
@@ -839,6 +840,7 @@ h4.command_prof {
   min-height: 387px;
   background: #000000 url("../img/subscribe.jpg") center center no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .subscribe_block .block_feture-descr,
@@ -857,16 +859,46 @@ h4.command_prof {
 
 .form_podpiska {
   display: flex;
-  justify-content: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
+}
+
+.full__contact_form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.full__contact_form .full__form__label .contact_input {
+  width: 100%;
+}
+
+.form_podpiska .form__label {
+  position: relative;
+  width: 75%;
+}
+
+.full__form__label {
+  position: relative;
+  margin-right: 5%;
+  width: 30%;
+}
+
+.full__form__label .js-validate-error-label {
+  top: 66%;
+}
+
+.full__form__label-theme {
+  margin-right: 0;
 }
 
 .input_podpiska {
   border: none;
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
-  width: 72%;
+  width: 100%;
   height: 50px;
   line-height: 50px;
   text-indent: 30px;
@@ -878,7 +910,7 @@ h4.command_prof {
   border: none;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
-  width: 28%;
+  width: 25%;
   height: 50px;
   font-weight: 800;
   line-height: 50px;
@@ -1266,8 +1298,18 @@ $color_formes: #18a3dd;
 }
 
 .forms-call label {
+  position: relative;
   display: block;
   margin: 10px 0;
+}
+
+.js-validate-error-label {
+  position: absolute;
+  right: 10%;
+  top: 100%;
+  width: 100%;
+  font-size: 0.75rem;
+  text-align: right;
 }
 
 .input_form {
@@ -1330,10 +1372,15 @@ $color_formes: #18a3dd;
 }
 
 .checkbox_box {
+  position: relative;
   margin: 20px auto 10px;
   padding: 0 0 0 30px;
   width: 100%;
   color: #ffffff;
+}
+
+.checkbox_box .js-validate-error-label {
+  top: 82%;
 }
 
 .big_form_case .checkbox_box {
@@ -1393,6 +1440,7 @@ $color_formes: #18a3dd;
 .link_form a {
   @include trans;
 
+  text-decoration: underline;
   color: #95989a;
 }
 
@@ -1516,25 +1564,9 @@ $color_formes: #18a3dd;
   color: #ffffff;
 }
 
-/* Hide original inputs */
-//.checkbox_box input[type="checkbox"],
 input[type="radio"] {
   display: none;
 }
-
-/* Checkboxes */
-// .checkbox_box input[type=checkbox] +label span {
-//   display: inline-block;
-//   vertical-align: middle;
-//   margin: 4px 8px 8px;
-//   border: 1px solid #ffffff;
-//   padding: 2px;
-//   width: 20px;
-//   height: 20px;
-//   font-size: 24pt;
-//   line-height: 0.25em;
-//   text-align: center;
-// }
 
 .submit_bb {
   display: inline-block;
@@ -1545,8 +1577,6 @@ input[type="radio"] {
   text-transform: uppercase;
   color: #f1f1f1;
   background-color: #017d61;
-  transition: all 0.2s ease;
-  transition: all 0.2s ease;
   transition: all 0.2s ease;
   cursor: pointer;
 }
@@ -1589,7 +1619,6 @@ input[type="radio"] {
   position: absolute;
   left: 0;
   top: -100%;
-  z-index: 1;
   z-index: 1100;
   display: flex;
   flex-direction: column;
@@ -2262,6 +2291,10 @@ input[type="radio"] {
     margin-left: 40px;
     text-align: center;
     transform: translateX(50%);
+  }
+
+  .form_podpiska .form__label {
+    width: 75%;
   }
 
   .input_podpiska {

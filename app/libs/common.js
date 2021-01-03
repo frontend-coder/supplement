@@ -1,3 +1,4 @@
+/* eslint-disable no-new */
 $(document).ready(() => {
   $(() => {
     $('.navbar-toggle, nav').click(() => {
@@ -32,7 +33,7 @@ $(document).ready(() => {
   });
 
   /* demo functions */
-  $('a[rel=\'next\']').click(function (e) {
+  $("a[rel='next']").click(function (e) {
     e.preventDefault();
     const to = $(this).parent().parent('section').next()
       .attr('id');
@@ -59,7 +60,6 @@ $(document).ready(() => {
     touchDrag: true,
     stagePadding: 30,
     stopOnHover: false,
-
   });
   $('#trade_mark_carousel').owlCarousel({
     loop: true,
@@ -87,11 +87,10 @@ $(document).ready(() => {
         items: 5,
       },
     },
-
   });
 
   $('#cor').owlCarousel({
-  // center: true,
+    // center: true,
     loop: true,
     nav: true,
     dots: true,
@@ -109,9 +108,9 @@ $(document).ready(() => {
   });
 
   function coverFlowEfx(e) {
-  // if ($('.owl-dots')) {
-  //   $('.owl-dots').remove();
-  // }
+    // if ($('.owl-dots')) {
+    //   $('.owl-dots').remove();
+    // }
     idx = e.item.index;
     $('.owl-item.big').removeClass('big');
     $('.owl-item.medium').removeClass('medium');
@@ -119,11 +118,19 @@ $(document).ready(() => {
     $('.owl-item.mdleft').removeClass('mdleft');
     $('.owl-item.smallRight').removeClass('smallRight');
     $('.owl-item.smallLeft').removeClass('smallLeft');
-    $('.owl-item').eq(idx - 1).addClass('medium mdleft');
+    $('.owl-item')
+      .eq(idx - 1)
+      .addClass('medium mdleft');
     $('.owl-item').eq(idx).addClass('big');
-    $('.owl-item').eq(idx + 1).addClass('medium mdright');
-    $('.owl-item').eq(idx + 2).addClass('smallRight');
-    $('.owl-item').eq(idx - 2).addClass('smallLeft');
+    $('.owl-item')
+      .eq(idx + 1)
+      .addClass('medium mdright');
+    $('.owl-item')
+      .eq(idx + 2)
+      .addClass('smallRight');
+    $('.owl-item')
+      .eq(idx - 2)
+      .addClass('smallLeft');
   }
 
   $('.hc_watch').magnificPopup({
@@ -137,7 +144,7 @@ $(document).ready(() => {
   });
 
   // всплывающие окна обратной связи позвонить мне
-  $('a[href=\'#call-backtimer\']').magnificPopup({
+  $("a[href='#call-backtimer']").magnificPopup({
     mainClass: 'mfp-fade',
     removalDelay: 400,
     type: 'inline',
@@ -145,31 +152,185 @@ $(document).ready(() => {
   });
 
   /* чтобы в формах был индивидуальный заголовок */
-  $('a[href=\'#call-backtimer\']').click(function () {
+  $("a[href='#call-backtimer']").click(function () {
     const dataForm = $(this).data('form');
-    const dataText = $(this).data('text');
-    $('.forms-call h4').text(dataText);
-    $('.forms-call [name=admin-data]').val(dataForm);
+    const dataYandex = $(this).data('yandex');
+    const dataTitle = $(this).data('title');
+    $('form.form-callback').attr('onsubmit', dataYandex);
+    $('.form-callback [name=admin-data]').val(dataForm);
+    $('.get__title').text(dataTitle);
   });
 
-  // Ajax push mesege http://api.jquery.com/jquery.ajax/
+  new window.JustValidate('#form_podpiska', {
+    rules: {
+      email: {
+        required: true,
+      },
+      checkbox: {
+        required: true,
+      },
+    },
+    messages: {
+      email: {
+        required: 'Поле обязательно к заполнению!',
+      },
+      checkbox: {
+        required: 'Поле обязателено к заполнению!',
+      },
+    },
+    focusWrongField: true,
+    submitHandler(form, values, ajax) {
+      console.log(values);
+      ajax({
+        url: 'mail.php',
+        method: 'POST',
+        data: values,
+        async: true,
+        callback: (response) => {
+          const MassPopup = "<div id='contact-form__send'><div class='success'><p>Спасибо за заявку</p></div></div>";
+          $('button.popup_submit').attr('disabled');
+          $('.forms').html(MassPopup);
+          setTimeout(() => {
+            form.reset();
+            $('.forms').html(' ');
+            // $('#ontact-form__send').removeClass('success');
+            $.magnificPopup.close();
+          }, 2000);
+          //       console.log(response);
+        },
+      });
+    },
+    invalidFormCallback(errors) {
+      // console.log(errors);
+    },
+  });
+  new window.JustValidate('.form-callback', {
+    rules: {
+      famely: {
+        required: true,
+        minLength: 5,
+        maxLength: 38,
+      },
+      tel: {
+        required: true,
+      },
+      checkbox: {
+        required: true,
+      },
+    },
+    messages: {
+      famely: {
+        required: 'Поле обязально к заполнению!',
+        minLength: 'Введите не менее 5 символов',
+        maxLength: 'Введите не более 38 символов',
+      },
+      tel: {
+        required: 'Поле обязательно к заполнению!',
+      },
+      checkbox: {
+        required: 'Поле обязателено к заполнению!',
+      },
+    },
+    focusWrongField: true,
+    submitHandler(form, values, ajax) {
+      console.log(values);
+      ajax({
+        url: 'mail.php',
+        method: 'POST',
+        data: values,
+        async: true,
+        callback: (response) => {
+          const MassPopup = "<div id='contact-form__send'><div class='success'><p>Спасибо за заявку</p></div></div>";
+          $('button.popup_submit').attr('disabled');
+          $('.forms').html(MassPopup);
+          setTimeout(() => {
+            form.reset();
+            $('.forms').html(' ');
+            // $('#ontact-form__send').removeClass('success');
+            $.magnificPopup.close();
+          }, 2000);
+          //       console.log(response);
+        },
+      });
+    },
+    invalidFormCallback(errors) {
+      // console.log(errors);
+    },
+  });
 
-  $('form').submit(function () { // Change
-    const th = $(this);
-    $.ajax({
-      type: 'POST',
-      url: 'mail.php', // Change
-      data: th.serialize(),
-    }).done(() => {
-      $('.forms-calldecor .success').addClass('active');
-      setTimeout(() => {
-        // Done Functions
-        $('.forms-calldecor .success').removeClass('active');
-        th.trigger('reset');
-        $.magnificPopup.close();
-      }, 3000);
-    });
-    return false;
+  // 2 форма
+
+  new window.JustValidate('#full_contactform', {
+    rules: {
+      famely: {
+        required: true,
+        minLength: 5,
+        maxLength: 38,
+      },
+      theme: {
+        required: true,
+        minLength: 15,
+        maxLength: 38,
+      },
+      texted: {
+        required: true,
+        minLength: 15,
+        maxLength: 300,
+      },
+      tel: {
+        required: true,
+      },
+      checkbox: {
+        required: true,
+      },
+    },
+    messages: {
+      famely: {
+        required: 'Поле обязально к заполнению!',
+        minLength: 'Введите не менее 5 символов',
+        maxLength: 'Введите не более 38 символов',
+      },
+      theme: {
+        required: 'Поле обязально к заполнению!',
+        minLength: 'Введите не менее 5 символов',
+        maxLength: 'Введите не более 38 символов',
+      },
+      texted: {
+        required: 'Поле обязально к заполнению!',
+        minLength: 'Введите не менее 15 символов',
+        maxLength: 'Введите не более 300 символов',
+      },
+      tel: {
+        required: 'Поле обязательно к заполнению',
+      },
+      checkbox: {
+        required: 'Поле обязателено к заполнению',
+      },
+    },
+    focusWrongField: true,
+    submitHandler(form, values, ajax) {
+      console.log(values);
+      ajax({
+        url: 'mailbig.php',
+        method: 'POST',
+        data: values,
+        async: true,
+        callback: (response) => {
+          const MassPopup = "<div id='contact-form__send'><div class='success'><p>Спасибо за заявку</p></div></div>";
+          $('.forms').html(MassPopup);
+          setTimeout(() => {
+            form.reset();
+            $('.forms').html(' ');
+            // $('#ontact-form__send').removeClass('success');
+            $.magnificPopup.close();
+          }, 2000);
+          //       console.log(response);
+        },
+      });
+    },
+    invalidFormCallback(errors) {
+      // console.log(errors);
+    },
   });
   // castom code
 });
